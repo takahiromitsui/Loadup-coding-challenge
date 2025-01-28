@@ -10,7 +10,7 @@ export default function ClientSideLayout({
 }>) {
 	const showSidebar = useBreakpointValue({ base: false, lg: true });
 	return (
-		<Grid templateColumns='repeat(6, 1fr)' bg='gray.50'>
+		<Grid templateColumns='repeat(6, 1fr)'>
 			{showSidebar ? (
 				<GridItem
 					as='aside'
@@ -40,9 +40,10 @@ export default function ClientSideLayout({
 					xl: 5,
 				}}
 				p='40px'
+				overflowY='auto'
 			>
 				<Navbar />
-				{children}
+				<div className='mt-8'>{children}</div>
 			</GridItem>
 		</Grid>
 	);
