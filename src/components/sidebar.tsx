@@ -1,6 +1,6 @@
 'use client';
 import { Flex, List } from '@chakra-ui/react';
-import { House } from 'lucide-react';
+import { ChartColumn, House } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -10,7 +10,11 @@ const sidebarItems = [
 		href: '/',
 		icon: House,
 	},
-	// { name: 'Profile', icon: UserRound, href: '/profile' },
+	{
+		name: 'Tables',
+		href: '/tables',
+		icon: ChartColumn,
+	},
 ];
 export default function Sidebar() {
 	const pathname = usePathname();
