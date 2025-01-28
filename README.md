@@ -20,12 +20,7 @@ I decided to focus on two main pages:
 
 
 ## How to Run the Application
-
-1. Navigate to the dashboard directory:
-```bash
-cd dashboard 
-```
-2. Install the dependencies:
+1. Install the dependencies:
 ```bash
 npm install  
 # or  
@@ -36,7 +31,7 @@ pnpm install
 bun install  
 ```
 
-3. Start the development server:
+2. Start the development server:
 ```bash
 npm run dev
 # or
@@ -46,7 +41,7 @@ pnpm dev
 # or
 bun dev
 ```
-4. Check http://localhost:3000  
+3. Check http://localhost:3000  
 ## Project Structure
 The project structure follows the standard Next.js application setup, so no detailed explanation is necessary. However, the mocks directory deserves some attention:
 
