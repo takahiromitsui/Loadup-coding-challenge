@@ -1,5 +1,6 @@
 'use client';
 import { Grid, GridItem, useBreakpointValue } from '@chakra-ui/react';
+import Sidebar from './sidebar';
 
 export default function ClientSideLayout({
 	children,
@@ -26,7 +27,7 @@ export default function ClientSideLayout({
 						lg: '40px',
 					}}
 				>
-					<>Side bar</>
+					<Sidebar />
 				</GridItem>
 			) : null}
 
