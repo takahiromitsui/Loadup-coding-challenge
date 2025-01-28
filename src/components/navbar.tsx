@@ -14,14 +14,20 @@ import {
 } from '@chakra-ui/react';
 import { Menu, User } from 'lucide-react';
 import Sidebar from './sidebar';
+import { usePathname } from 'next/navigation';
+
+const pageNameMap = {
+	'/': 'Dashboard',
+	'/tables': 'Tables',
+};
 
 export default function Navbar() {
 	const showHamburger = useBreakpointValue({ base: true, lg: false });
-
+	const pathname = usePathname() as keyof typeof pageNameMap;
 	return (
 		<Flex as='nav' alignItems='center' position='relative'>
 			<Heading as='h1' fontSize='xl' fontWeight='bold'>
-				Dashboard
+				{pageNameMap[pathname] ? pageNameMap[pathname] : 'Page Not Found'}
 			</Heading>
 			<Spacer />
 			<HStack>
