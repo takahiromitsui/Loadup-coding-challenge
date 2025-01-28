@@ -16,7 +16,7 @@ export default function FinancialCard(
 	props: ReturnType<typeof mockFetchFinancialData>[number]
 ) {
 	return (
-		<Card.Root variant='elevated' className='rounded'>
+		<Card.Root variant='elevated' className='rounded-xl'>
 			<Card.Header>
 				<Card.Title fontSize='lg' fontWeight='bold' color='gray.500'>
 					{props.name}
